@@ -1,0 +1,16 @@
+.list{
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 2%;
+    margin: 2%;
+    filter: drop-shadow(15px 10px 4px rgb(73, 73, 73));
+}
+
+li{
+    margin: 2%;
+}
+h3{
+    margin: 2%;
+}

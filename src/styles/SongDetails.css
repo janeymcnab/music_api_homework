@@ -1,0 +1,28 @@
+.container {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 2%;
+    margin: 2%;
+    filter: drop-shadow(15px 10px 4px rgb(73, 73, 73));
+}
+
+.position{
+    margin-top: 0%;
+}
+.name{
+    display: flex;
+}
+.artist{
+    display: flex;
+}
+.album-art{
+    display: flex;
+    position: relative;
+    width: 80%;  
+}
+
+.controls{
+    display: flex;
+    justify-content: right;
+}

@@ -1,8 +1,12 @@
+import '../styles/SongSelector.css'
+
 const SongSelector = ({onSelectedSongIncrement, onSelectedSongDecrement}) => {
     return(
         <>
-        <button onClick={onSelectedSongDecrement}>Previous Song</button>
-        <button onClick={onSelectedSongIncrement}>Next Song</button>
+        <div className="button-container">
+        <button className="button-down"onClick={onSelectedSongDecrement}>Previous Song</button>
+        <button className="button-up"onClick={onSelectedSongIncrement}>Next Song</button>
+        </div>
         </>
     );
 }

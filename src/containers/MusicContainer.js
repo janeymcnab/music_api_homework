@@ -1,24 +1,32 @@
 import {useState, useEffect} from 'react';
 import SongDetails from '../components/SongDetails';
 import SongSelector from '../components/SongSelector';
+import SongList from '../components/SongList';
+// import AudioPlayer from '../components/AudioPlayer';
 
 const MusicContainer = () => {
 
-    const [song, setSong] = useState({});
-    const [selectedSongEntry, setSelectedSongEntry] = useState(1);
+    const [songs, setSongs] = useState({});
+    const [selectedSongEntry, setSelectedSongEntry] = useState(0);
     const [loaded, setLoaded] = useState(false);
+    // const [isPlaying, setIsPlaying] = useState(false);
 
-    const getSong = () => {
+    // const togglePlayPause = () => {
+    //     setIsPlaying(! isPlaying);
+    // }
+
+
+    const getSongs = () => {
         console.log('getting song information');
-        fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
+        fetch(`https://itunes.apple.com/gb/rss/topsongs/limit=20/json`)
         .then(response => response.json())
-        .then(data => setSong(data))
+        .then(data => setSongs(data))
         .then(()=>setLoaded(true))
         
     }
 
     useEffect(()=>{
-        getSong();
+        getSongs();
     },[selectedSongEntry])
 
     const upSelectedSong = () => {
@@ -37,15 +45,26 @@ const MusicContainer = () => {
 
     return(
         <>
-        <h1>Music Container</h1>
+        <SongDetails
+        songs = {songs}
+        loaded = {loaded}
+        selectedSongEntry = {selectedSongEntry}
+        />
         <SongSelector
         onSelectedSongIncrement = {() => upSelectedSong()}
         onSelectedSongDecrement = {() => downSelectedSong()}
         />
-        <SongDetails
-        song = {song}
+        {/* <AudioPlayer
+        songs = {songs}
         loaded = {loaded}
-        />
+        selectedSongEntry = {selectedSongEntry}
+        // togglePlayPause = {() => togglePlayPause()}
+        // isPLaying = {isPlaying}
+        /> */}
+         <SongList
+         songs = {songs}
+         loaded = {loaded}
+         selectedSongEntry = {selectedSongEntry}/>
         </>
     );
 }
