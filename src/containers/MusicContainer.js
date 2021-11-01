@@ -25,6 +25,7 @@ const MusicContainer = () => {
         
     }
 
+    
     useEffect(()=>{
         getSongs();
     },[selectedSongEntry])
@@ -45,15 +46,7 @@ const MusicContainer = () => {
 
     return(
         <>
-        <SongDetails
-        songs = {songs}
-        loaded = {loaded}
-        selectedSongEntry = {selectedSongEntry}
-        />
-        <SongSelector
-        onSelectedSongIncrement = {() => upSelectedSong()}
-        onSelectedSongDecrement = {() => downSelectedSong()}
-        />
+       
         {/* <AudioPlayer
         songs = {songs}
         loaded = {loaded}
@@ -65,6 +58,17 @@ const MusicContainer = () => {
          songs = {songs}
          loaded = {loaded}
          selectedSongEntry = {selectedSongEntry}/>
+          <section>
+        <SongDetails
+        songs = {songs}
+        loaded = {loaded}
+        selectedSongEntry = {selectedSongEntry}
+        />
+        <SongSelector
+        onSelectedSongIncrement = {() => upSelectedSong()}
+        onSelectedSongDecrement = {() => downSelectedSong()}
+        />
+        </section>
         </>
     );
 }
