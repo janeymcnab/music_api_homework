@@ -2,18 +2,12 @@ import {useState, useEffect} from 'react';
 import SongDetails from '../components/SongDetails';
 import SongSelector from '../components/SongSelector';
 import SongList from '../components/SongList';
-// import AudioPlayer from '../components/AudioPlayer';
 
 const MusicContainer = () => {
 
     const [songs, setSongs] = useState({});
     const [selectedSongEntry, setSelectedSongEntry] = useState(0);
     const [loaded, setLoaded] = useState(false);
-    // const [isPlaying, setIsPlaying] = useState(false);
-
-    // const togglePlayPause = () => {
-    //     setIsPlaying(! isPlaying);
-    // }
 
 
     const getSongs = () => {
@@ -44,16 +38,9 @@ const MusicContainer = () => {
         } 
     }
 
+
     return(
         <>
-       
-        {/* <AudioPlayer
-        songs = {songs}
-        loaded = {loaded}
-        selectedSongEntry = {selectedSongEntry}
-        // togglePlayPause = {() => togglePlayPause()}
-        // isPLaying = {isPlaying}
-        /> */}
          <SongList
          songs = {songs}
          loaded = {loaded}
@@ -65,7 +52,7 @@ const MusicContainer = () => {
         selectedSongEntry = {selectedSongEntry}
         />
         <SongSelector
-        onSelectedSongIncrement = {() => upSelectedSong()}
+        onSelectedSongIncrement = {() => upSelectedSong()} 
         onSelectedSongDecrement = {() => downSelectedSong()}
         />
         </section>

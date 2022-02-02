@@ -1,6 +1,6 @@
 import '../styles/SongSelector.css'
 
-const SongSelector = ({onSelectedSongIncrement, onSelectedSongDecrement}) => {
+const SongSelector = ({audio, onSelectedSongIncrement, onSelectedSongDecrement}) => {
     return(
         <>
         <div className="button-container">

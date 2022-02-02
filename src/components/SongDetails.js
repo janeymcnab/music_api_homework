@@ -1,4 +1,6 @@
 import '../styles/SongDetails.css'
+import ReactAudioPlayer from 'react-audio-player';
+
 const SongDetails = ({songs, loaded, selectedSongEntry}) => {
     
     if(!loaded){
@@ -14,7 +16,7 @@ const SongDetails = ({songs, loaded, selectedSongEntry}) => {
             <h3 className="name">{songs.feed.entry[selectedSongEntry]["im:name"]["label"]}</h3>
             <img className="album-art" src={songs.feed.entry[selectedSongEntry]["im:image"][2]["label"]}/>
             <h3 className="artist">{songs.feed.entry[selectedSongEntry]["im:artist"]["label"]}</h3>
-            <audio controls className="controls"> <source src={songs.feed.entry[selectedSongEntry].link[1].attributes.href} type="audio/mpeg"/></audio>
+            <ReactAudioPlayer src={songs.feed.entry[selectedSongEntry].link[1].attributes.href} controls/>
             </div>   
         </>
 
