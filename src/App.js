@@ -4,8 +4,9 @@ import './styles/App.css'
 function App() {
   return (
     <>
-    <h1>UK Top 20</h1>
-    <MusicContainer/>
+    <div className="container">
+    <MusicContainer />
+    </div>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import '../styles/SongList.css'
 import SongDetails from "./SongDetails";
 
-const SongList = ({songs, loaded, selectedSongEntry}) => {
+const SongList = ({songs, loaded}) => {
 
     if(!loaded){
         return(
@@ -16,7 +16,7 @@ const SongList = ({songs, loaded, selectedSongEntry}) => {
         <>
         <div className="list">
         <h3>Top 20</h3>
-        <li>{newList}</li>
+        <ol>{newList}</ol>
         </div>
         </>
     )

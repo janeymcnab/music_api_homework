@@ -6,3 +6,7 @@
 h1{
     margin: 2%;
 }
+
+.container{
+    display: flex;
+}

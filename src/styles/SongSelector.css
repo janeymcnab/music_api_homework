@@ -1,8 +1,7 @@
 .button-container{
     display: block;
-    margin: 2%;
-    margin-top: 0;
-    margin-left: 3%;
+    margin: auto;
+    padding-top: 5%;
     width: 350px;
 }
 

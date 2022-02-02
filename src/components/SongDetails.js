@@ -16,7 +16,7 @@ const SongDetails = ({songs, loaded, selectedSongEntry}) => {
             <h3 className="name">{songs.feed.entry[selectedSongEntry]["im:name"]["label"]}</h3>
             <img className="album-art" src={songs.feed.entry[selectedSongEntry]["im:image"][2]["label"]}/>
             <h3 className="artist">{songs.feed.entry[selectedSongEntry]["im:artist"]["label"]}</h3>
-            <ReactAudioPlayer src={songs.feed.entry[selectedSongEntry].link[1].attributes.href} controls/>
+            <ReactAudioPlayer src={songs.feed.entry[selectedSongEntry].link[1].attributes.href} controls className="controls"/>
             </div>   
         </>
 

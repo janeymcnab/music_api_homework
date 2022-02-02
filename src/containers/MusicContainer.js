@@ -41,11 +41,7 @@ const MusicContainer = () => {
 
     return(
         <>
-         <SongList
-         songs = {songs}
-         loaded = {loaded}
-         selectedSongEntry = {selectedSongEntry}/>
-          <section>
+        <section>
         <SongDetails
         songs = {songs}
         loaded = {loaded}
@@ -56,6 +52,10 @@ const MusicContainer = () => {
         onSelectedSongDecrement = {() => downSelectedSong()}
         />
         </section>
+         <SongList
+         songs = {songs}
+         loaded = {loaded}
+         selectedSongEntry = {selectedSongEntry}/>
         </>
     );
 }

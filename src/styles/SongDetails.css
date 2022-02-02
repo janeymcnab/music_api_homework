@@ -4,8 +4,8 @@ section {
     display: inline-block;
     padding: 2%;
     margin: 2%;
-    margin-top: 0;
     filter: drop-shadow(15px 10px 4px rgb(73, 73, 73));
+    width: 30%;
 }
 
 .position{
@@ -13,17 +13,22 @@ section {
 }
 .name{
     display: flex;
+    padding: 5%;
 }
 .artist{
     display: flex;
+    padding: 5%;
 }
 .album-art{
     display: flex;
-    position: relative;
-    width: 80%;  
+    margin: auto;
+    width: 90%;  
+    border: 1px solid black;
+    border-radius: 10px;
+
 }
 
 .controls{
     display: flex;
-    justify-content: right;
+    margin: auto;
 }
